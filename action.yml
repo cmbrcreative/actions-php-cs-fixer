@@ -1,0 +1,15 @@
+name: PHP CS Fixer
+description: A GitHub Action to run PHP CS Fixer (php-cs-fixer) on your php files.
+author: Camber Creative
+
+inputs:
+  dir:
+    description: 'Folder to check code style'
+    required: false
+    default: '.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dir }}
